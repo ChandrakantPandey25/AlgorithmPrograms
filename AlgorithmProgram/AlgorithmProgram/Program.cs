@@ -6,7 +6,7 @@ namespace AlgorithmProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter:1.Permutations of string\t Enter:2.Binary search word from word list");
+            Console.WriteLine("Enter:1.Permutations of string\nEnter:2.Binary search word from word list\nEnter:3.Insertion Sort");
             int option = Convert.ToInt32(Console.ReadLine());
             //bool flag = true;
             switch (option)
@@ -25,10 +25,11 @@ namespace AlgorithmProgram
                     Console.WriteLine("string is" + CheckArrayString.CheckString(arrOne, arrTwo));
                     break;
                 case 2:
-                    BinarySearch.SearchWord();
-
-                    //BinarySearch.WordArray();
+                    BinarySearch.SearchWord();                    
                     Console.WriteLine();
+                    break;
+                case 3:
+                    InsertionSort.DisplayArrayUsingSort();
                     break;
             }
         }
