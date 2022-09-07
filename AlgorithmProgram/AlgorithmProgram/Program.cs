@@ -6,7 +6,7 @@ namespace AlgorithmProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter:1.Permutations of string\nEnter:2.Binary search word from word list\nEnter:3.Insertion Sort");
+            Console.WriteLine("Enter:1.Permutations of string\nEnter:2.Binary search word from word list\nEnter:3.Insertion Sort\nEnter:4.Bubble Sort");
             int option = Convert.ToInt32(Console.ReadLine());
             //bool flag = true;
             switch (option)
@@ -30,6 +30,18 @@ namespace AlgorithmProgram
                     break;
                 case 3:
                     InsertionSort.DisplayArrayUsingSort();
+                    break;
+                case 4:
+                    
+                    Console.WriteLine("Enter Eight words");
+                    int[] arrInt = new int[7];
+                    for (int i = 0; i < arrInt.Length; i++)
+                    {
+                        arrInt[i] = Convert.ToInt32(Console.ReadLine());
+                    }
+                    BubbleSort.BubbleSorting(arrInt);
+                    Console.WriteLine("Sorted Array is: ");
+                    BubbleSort.printArray(arrInt);
                     break;
             }
         }
